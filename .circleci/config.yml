@@ -34,3 +34,8 @@ jobs:
             command: |
               #Decrypt server key
               sfdx force --help
+      - run:
+            name: auth 
+            command: |
+              #Decrypt server key
+              sfdx-circleci-org> sfdx force:auth:sfdxurl:store -f assets/sfdxurl.txt -d -a hub-sfdx-circleci-org
